@@ -32,7 +32,7 @@ public class EquipoDeTrabajo {
 		}
 		return sum / listaDeEdades.size();
 	}
-
+// CRINGE CRINGE CRINGE CRINGE
 	private ArrayList<Integer> getListaDeEdades() {
 		ArrayList<Integer> listaDeEdades = new ArrayList<Integer>();
 		for (Persona persona : integrantes) {

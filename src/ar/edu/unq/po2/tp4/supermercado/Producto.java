@@ -1,35 +1,16 @@
 package ar.edu.unq.po2.tp4.supermercado;
 
-public abstract class Producto {
+public class Producto extends Mercaderia {
 
-	private String nombre;
-	private double precio;
-	private boolean esParteDePreciosCuidados;
+	public Producto(String nombre, Double precioBase, Boolean esParteDePreciosCuidados) {
+		super(nombre, precioBase, esParteDePreciosCuidados);
+	}
 	
-	public Producto(String nombre, double precio, boolean b) {
-		this.nombre = nombre;
-		this.precio = precio;
-		this.esParteDePreciosCuidados = b;
+	public Producto(String nombre, Double precioBase) {
+		super(nombre, precioBase);
 	}
 
-	public Producto(String nombre, double precio) {
-		this.nombre = nombre;
-		this.precio = precio;
-		this.esParteDePreciosCuidados = false;
+	public Double getPrecio() {
+		return this.getPrecioBase();
 	}
-
-	public Object getNombre() {
-		return nombre;
-	}
-
-	public abstract Double getPrecio();
-	
-	public boolean esPrecioCuidado() {
-		return esParteDePreciosCuidados;
-	}
-
-	public void aumentarPrecio(double d) {
-		this.precio += d;
-	}
-
 }

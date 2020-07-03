@@ -69,7 +69,7 @@ public class Articulo {
 	}
 
 	public boolean esInteresantePara(IObservadorArticulos ob) {
-		return;
+		return false;
 	}
 	
 	public boolean tituloCoincideConIntereses(List<String> intereses) {

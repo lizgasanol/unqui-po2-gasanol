@@ -19,7 +19,7 @@ public class Sistema {
 
 	private void notificarObservadores(Articulo articulo) {
 		for (IObservadorArticulos ob : this.observadores) {
-			if(articulo.esInteresantePara(ob)) {
+			if(ob.estaInteresadoEn(articulo)) {
 				ob.recibirNotificacion(articulo);
 			}
 		}

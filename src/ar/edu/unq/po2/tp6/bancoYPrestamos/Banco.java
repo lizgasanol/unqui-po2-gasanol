@@ -23,4 +23,16 @@ public class Banco {
 	public List<SolicitudDeCredito> getSolicitudesDeCredito(){
 		return this.solicitudesDeCredito;
 	}
+	
+	public Double getMontoADesembolsar(){
+		Double ret = 0d;
+		
+		for(SolicitudDeCredito solicitud : this.getSolicitudesDeCredito()) {
+			if (solicitud.esAceptable()) {
+				ret += solicitud.getMontoSolicitado();
+			}
+		}
+		
+		return ret;
+	}
 }

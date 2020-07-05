@@ -67,13 +67,4 @@ public class Articulo {
 	public void setPalabrasClave(List<String> palabrasClave) {
 		this.palabrasClave = palabrasClave;
 	}
-
-	public boolean esInteresantePara(IObservadorArticulos ob) {
-		return false;
-	}
-	
-	public boolean tituloCoincideConIntereses(List<String> intereses) {
-		return intereses.stream().anyMatch(interes -> interes.equals(this.titulo));
-	}
-	
 }
